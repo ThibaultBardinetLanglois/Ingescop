@@ -12,7 +12,7 @@
 
     {{ include('admin/project/_form-project.html.twig', {'button_label': 'Mettre à jour'}) }}
     <div  class="edit-project-description">
-        <h3 class="font-semibold">Image Principal</h3>
+        <h3 class="font-semibold">Image Principale</h3>
         <div class="edit-project-main-image">
             <img src="{{ asset('/uploads/images/' ~ project.mainPhoto) }}" alt="{{ project.mainPhoto }}" width="150px">
         </div>
@@ -22,7 +22,7 @@
         {% for image in project.images %}
             <div class="edit-project-secondary-pic-block">
                 <div class="edit-project-secondary-pic">
-                    <img src="{{ asset('/uploads/images/' ~ image.name) }}" alt="{{ image.id }}" width="150px">
+                    <a href="{{ asset('/uploads/images/' ~ image.name) }}" target="blank"><img src="{{ asset('/uploads/images/' ~ image.name) }}" alt="{{ image.id }}" width="150px"></a>
                 </div>
                 <form method="post" action="{{ path('admin_delete_project_image', {'project_id': project.id, 'image_id': image.id}) }}" onsubmit="return confirm('Êtes vous sûr de bien vouloir supprimer cette image?');">
                     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ image.id) }}">

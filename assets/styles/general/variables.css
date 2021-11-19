@@ -2,9 +2,9 @@
 
 :root {
     --grey: rgba(196,196,196,1.0);
-    --orange: rgb(237, 114, 26);
-    --red: rgba(161,25,27,1.0);
-    --white: rgba(243,244,239,1.0);
-    --black: rgba(59,62,71,1.0);
-    --brown: rgba(181,147,138,1.0);
+    --orange: #ed721a;
+    --red: #a1191bff;
+    --white: #f3f4efff;
+    --black: #3b3e47ff;
+    --brown: #b5938aff;
 }
